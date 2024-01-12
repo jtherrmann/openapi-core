@@ -97,6 +97,7 @@ class APICallPathFinder(BasePathFinder):
     def _get_servers_iter(
         self, name: str, operations_iter: Iterator[PathOperation]
     ) -> Iterator[PathOperationServer]:
+        print(f'openapi-core _get_servers_iter name: {name}')
         print(f'openapi-core base url: {self.base_url}')
         for path, operation, path_result in operations_iter:
             servers = (
